@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 15 Methods</title>
+    <script>
+        document.addEventListener("click", function() {
+                document.getElementById("mo").innerHTML = "You are Beautiful/Handsome !!!";
+            })
+            //****************************************************************************************************
+
+        function qs() {
+            document.querySelector("#qs").innerHTML = "How r u?";
+            document.querySelector(".qs").style.color = "blue";
+            document.querySelector(".qs").innerHTML = "BLUE color";
+        }
+        //********************************************************************************************************
+
+        function qs2() { //used loop which selects all elements
+            var x, i;
+            x = document.querySelectorAll(".a");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.backgroundColor = "blue";
+            }
+        }
+        //*********************************************************************************************************
+        document.addEventListener("mousemove", add);
+
+        function add() {
+            document.getElementById("no").innerHTML = Math.random();
+        }
+
+        function removeHandler() {
+            document.removeEventListener("mousemove", add);
+        }
+        //---------------------------------------------------------------------------------------------------
+        //function ce() {
+        //var btn = document.createElement("button");
+        // document.body.appendChild(btn);
+        // }
+
+
+
+        //************************************************************************************************************
+        function ac() {
+            var node = document.createElement("li");
+            var textnode = document.createTextNode("Mumbai");
+            node.appendChild(textnode);
+            document.getElementById("cities").appendChild(node);
+        }
+
+        //*******************************************************************
+
+        function rc() {
+            var list = document.getElementById("city");
+            list.removeChild(list.childNodes[0]);
+        }
+    </script>
+    <style>
+        body {
+            background-color: coral;
+        }
+    </style>
+
+</head>
+<!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
+
+<body>
+    <h1 id="center">DOM Manipulations Methods</h1>
+
+    <h1>
+        <li>addEventListener()</li>
+
+        <p><b>Events refer to what happens to an HTML element, such as clicking, focusing, or loading, to which we can react with JavaScript. We can assign JS functions to listen for these events in elements and do something when the event had occured.</b></p>
+    </h1>
+    <button><h2 id="mo">Click HERE !!! </button>
+    <!--*********************************************************************************************************-->
+    <h1>
+        <li>querySelector()</li>
+
+        <p><b>this method returns the first element that matches one or more CSS selectors. If no match is found, it returns null.</b></p>
+    </h1>
+    <h2 id="qs">hello</h2>
+    <h2 class="qs">click to c blue color</h2>
+    <button><h2 onclick="qs()">CLick</button>
+
+    <!--*********************************************************************************************************************-->
+    <h1>
+        <li> querySelectorAll()</li>
+
+        <p> <b>it returns only the first instance of all matching elements, querySelectorAll()returns all elements that match the specified CSS selector.</b></p>
+    </h1>
+    <h2 class="a">bg color1</h2>
+    <h2 class="a">bg color2</h2>
+    <h2 class="a">bg color3</h2>
+    <h2 class="a">bg color4</h2>
+    <button><h2 onclick="qs2()">CLick</button>
+    <!--*********************************************************************************************************************-->
+    <h1>
+        <li> removeEventListener()</li>
+
+        <p><b>The removeEventListener() method detaches an event listener previously added with the addEventListener() method from the event it is listening for.</b></p>
+    </h1>
+    <h2 id="no">0.100</h2>
+    <button><h2 onclick="removeHandler()">Click to Stop</button>
+
+
+    <!--*********************************************************************************************************************-->
+
+    <!--  <h1>
+
+        <li> createElement()</li>
+    </h1>
+    <p><b>The createElement() method creates a new HTML element using the name of the HTML tag to be created, such as 'p' or 'div'.</b></p>
+
+    <button onclick="ce()">Try it</button>-->
+
+
+    <!--*********************************************************************************************************************-->
+
+    <h1>
+        <li> appendChild()</li>
+        <p><b>  adds an element as the last child to the HTML element that invokes this method.</b></p>
+    </h1>
+    <ul id="cities">
+        <li>A.ngr</li>
+        <li>Pune</li>
+        <li>Kalyan</li>
+
+    </ul>
+    <button><h1 onclick="ac()">click to add</button>
+
+    <!--*********************************************************************************************************************-->
+
+    <h1>
+        <li> removeChild()</li>
+        <p><b>  The removeChild() method removes a specified child element from the HTML element that calls this method.  </b></p>
+    </h1>
+
+    <ul id="city">
+        <li>goa</li>
+        <li>pune</li>
+        <li>klyan</li>
+    </ul>
+    <button><h2 onclick="rc()">Click twice to remove child element</button>
+
+    <!--*********************************************************************************************************************-->
+
+    <h1>
+        <li>replaceChild()</li>
+
+        <p><b>The replaceChild() method replaces a child element with another one belonging to the parent element that calls this method.</b></p>
+
+    </h1>
+
+
+
+
+
+
+
+
+    <!--*********************************************************************************************************************-->
+
+
+
+
+
+
+
+
+
+    <!--*********************************************************************************************************************-->
+
+</body>
+</body>
+
+</html>
