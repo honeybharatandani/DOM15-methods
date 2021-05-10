@@ -58,10 +58,35 @@
             var list = document.getElementById("city");
             list.removeChild(list.childNodes[0]);
         }
+
+
+        function replacechild() {
+            var elmnt = document.createElement("li");
+            var textnode = document.createTextNode("Water");
+            elmnt.appendChild(textnode);
+
+            var item = document.getElementById("myList");
+            item.replaceChild(elmnt, item.childNodes[0]);
+        }
+
+        function clone() {
+            var itm = document.getElementById("myList2").lastChild;
+            var cln = itm.cloneNode(true);
+            document.getElementById("myList1").appendChild(cln);
+        }
+
+        function set() {
+            document.getElementsByTagName("h3")[0].setAttribute("class", "democlass");
+        }
     </script>
     <style>
         body {
             background-color: coral;
+        }
+        
+        .democlass {
+            font-weight: bold;
+            color: rgb(26, 116, 175);
         }
     </style>
 
@@ -155,15 +180,49 @@
         <p><b>The replaceChild() method replaces a child element with another one belonging to the parent element that calls this method.</b></p>
 
     </h1>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
 
 
+    <button><h1 onclick="replace()">Try it</button>
 
+    <!--*********************************************************************************************************************-->
 
+    <h1>
+        <li>cloneNode()</li>
+        <p><b>The cloneNode() method creates a copy of a node, and returns the clone.</b></p>
+    </h1>
 
+    <ul id="myList1">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <ul id="myList2">
+        <li>Water</li>
+        <li>Milk</li>
+    </ul>
 
+    <button><h1 onclick="clone()">Try it</button>
 
 
     <!--*********************************************************************************************************************-->
+    <h1>
+        <li> setAttribute()</li>
+        <p><b>The setAttribute() method either adds a new attribute to an HTML element, or updates the value of an attribute that already exists.</b></p>
+        <h3>Hello developers</h3>
+        <button><h1 onclick="set()">click</button>
+
+
+
+
+
+
+
+
+        <!--*********************************************************************************************************************-->
 
 
 
@@ -173,7 +232,7 @@
 
 
 
-    <!--*********************************************************************************************************************-->
+        <!--*********************************************************************************************************************-->
 
 </body>
 </body>
