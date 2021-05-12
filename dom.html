@@ -8,6 +8,11 @@
     <title>Dom 15 Methods</title>
     <script src="dom.js"></script>
     <link rel="stylesheet" href="dom.css">
+    <style>
+        #center {
+            color: mediumvioletred;
+        }
+    </style>
 </head>
 
 <!--$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$-->
@@ -147,7 +152,71 @@
 
 
 
-        <button onclick="insert()">Try it</button>
+        <button><h1 onclick="insert()">Try it</button>
+
+        <!--*********************************************************************************************************************-->
+
+
+        <h1>
+            <li>createDocumentFragment()</li>
+        </h1>
+        <p><b>it is used, if you want to insert multiple elements in bulk, such as adding multiple rows to a table.</b></p>
+        <ul id="ul">
+        </ul>
+        <button><h1 onclick="frag()">click</button>
+
+
+
+        <!--*********************************************************************************************************************-->
+        <h1>
+            <li>getComputedStyle()</li>
+        </h1>
+        <p>Sometimes you want to check the CSS property values of an element before making any changes. You can use the ele.style property to do the same, however the getComputedStyle() method has been made just for this purpose, it returns the read-only
+            computed values of all the CSS properties of a specified HTML element.</p>
+        <div id="test" style="height: 50px;background-color: red">
+            <h2>Red Color</h2>
+        </div>
+        <p><button><h1 onclick="comp()">Try it</button></p>
+        <h2>The computed background color for the test div is: <span id="demo"></span></h2>
+
+
+
+
+        <!--*********************************************************************************************************************-->
+        <h1>
+            <li>getAttribute()</li>
+        </h1>
+        <p>The getAttribute() method returns the value of a specified attribute belonging to a certain HTML element.</p>
+        <h2 class="democlass">Click the button to display the value of the class attribute of the h2 element.</h2>
+        <h2 id="demo1"></h2>
+        <button><h1 onclick="get1()">Try it</button>
+
+
+        <!--*********************************************************************************************************************-->
+        <h1>
+            <li>removeAttribute()</li>
+        </h1>
+        <p>The removeAttribute() method <b> removes a given attribute</b>of a specific HTML element.</p>
+        <h4 class="democlass">Hello World</h4>
+        <p id="demo">Click the button to remove the class attribute from the h1 element.</p>
+        <button><h1 onclick="rem()">Try it</button>
+        <!--*********************************************************************************************************************-->
+
+        <h1>
+            <li>createElement()</li>
+        </h1>
+        <p>The createElement() method creates a new HTML element using the name of the HTML tag to be created, such as 'p' or 'div'.</p>
+        <button><h1 onclick="fun10()">Try it</button>
+        </ol>
+
+
+
+
+
+
+
+
+
 
 
 

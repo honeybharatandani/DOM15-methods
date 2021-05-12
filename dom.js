@@ -77,3 +77,35 @@ function insert() {
     var list = document.getElementById("in");
     list.insertBefore(newItem, list.childNodes[0]);
 }
+
+function frag() {
+    var element = document.getElementById('ul');
+    var fragment = document.createDocumentFragment();
+    var browsers = ['Firefox', 'Chrome', 'Opera', 'Safari', 'Internet Explorer'];
+    browsers.forEach(function(browser) {
+        var li = document.createElement('li');
+        li.textContent = browser;
+        fragment.appendChild(li);
+    });
+    element.appendChild(fragment);
+}
+
+function comp() {
+    var elem = document.getElementById("test");
+    var theCSSprop = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+    document.getElementById("demo").innerHTML = theCSSprop;
+}
+
+function get1() {
+    var x = document.getElementsByClassName("democlass")[0].getAttribute("class");
+    document.getElementById("demo1").innerHTML = x;
+}
+
+function rem() {
+    document.getElementsByTagName("h4")[0].removeAttribute("class");
+}
+
+function fun10() {
+    var btn = document.createElement("button");
+    document.body.appendChild(btn);
+}
